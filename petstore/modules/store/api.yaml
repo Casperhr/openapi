@@ -1,0 +1,103 @@
+"/store/inventory":
+  get:
+    tags:
+    - store
+    summary: Returns pet inventories by status
+    description: Returns a map of status codes to quantities
+    operationId: getInventory
+    responses:
+      200:
+        description: successful operation
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties:
+                type: integer
+                format: int32
+    security:
+    - api_key: []
+"/store/order":
+  post:
+    tags:
+    - store
+    summary: Place an order for a pet
+    description: ''
+    operationId: placeOrder
+    responses:
+      200: 
+        $ref: "#/components/responses/Order"
+      400:
+        $ref: "../../components/responses.yaml#/400"
+    requestBody:
+      $ref: "#/components/requestBodies/Order"    
+"/store/order/{orderId}":
+  get:
+    tags:
+    - store
+    summary: Find purchase order by ID
+    description: For valid response try integer IDs with value >= 1 and <= 10. Other
+      values will generated exceptions
+    operationId: getOrderById
+    parameters:
+    - name: orderId
+      in: path
+      description: ID of pet that needs to be fetched
+      required: true
+      schema:
+        type: integer
+        format: int64
+        minimum: 1
+        maximum: 10
+    responses:
+      200: 
+        $ref: "#/components/responses/Order"
+      400:
+        $ref: "../../components/responses.yaml#/400"
+      404:
+        $ref: "../../components/responses.yaml#/404"
+  delete:
+    tags:
+    - store
+    summary: Delete purchase order by ID
+    description: For valid response try integer IDs with positive integer value.
+      Negative or non-integer values will generate API errors
+    operationId: deleteOrder
+    parameters:
+    - name: orderId
+      in: path
+      description: ID of the order that needs to be deleted
+      required: true
+      schema:
+        type: integer
+        format: int64
+        minimum: 1
+    responses:
+      400:
+        $ref: "../../components/responses.yaml#/400"
+      404:
+        $ref: "../../components/responses.yaml#/404"
+components:
+  requestBodies:
+    Order:
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/StoreOrder"
+      description: order placed for purchasing the pet
+      required: true
+  schemas:
+    Order:
+      $ref: "./models/order.yaml#/Order"
+    StoreOrder:
+     $ref: "./models/order.yaml#/StoreOrder"      
+  responses:
+    Order:
+      description: successful operation
+      content:
+        application/xml:
+          schema:
+            $ref: "#/components/schemas/Order"
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Order"      

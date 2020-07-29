@@ -1,0 +1,20 @@
+Order:
+  $ref: "../modules/store/api.yaml#/components/schemas/Order"
+User:
+  $ref: "../modules/user/api.yaml#/components/schemas/User"
+Category:
+  $ref: "../modules/pet/api.yaml#/components/schemas/Category"
+Tag:
+  $ref: "../modules/pet/api.yaml#/components/schemas/Tag"    
+ApiResponse:
+  type: object
+  properties:
+    code:
+      type: integer
+      format: int32
+    type:
+      type: string
+    message:
+      type: string
+Pet:
+  $ref: "../modules/pet/api.yaml#/components/schemas/Pet" 

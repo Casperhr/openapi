@@ -1,0 +1,66 @@
+openapi: 3.0.0
+servers:
+- url: https://petstore.swagger.io/v2
+- url: http://petstore.swagger.io/v2
+info:
+  description: 'This is a sample server Petstore server.  You can find out more about
+    Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).  For
+    this sample, you can use the api key `special-key` to test the authorization filters.'
+  version: 1.0.0
+  title: Swagger Petstore
+  termsOfService: http://swagger.io/terms/
+  contact:
+    email: apiteam@swagger.io
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+tags:
+- name: pet
+  description: Everything about your Pets
+  externalDocs:
+    description: Find out more
+    url: http://swagger.io
+- name: store
+  description: Access to Petstore orders
+- name: user
+  description: Operations about user
+  externalDocs:
+    description: Find out more about our store
+    url: http://swagger.io
+paths:
+  "/pet":
+    $ref: "./modules/pet/api.yaml#/~1pet"  
+  "/pet/findByStatus":
+    $ref: "./modules/pet/api.yaml#/~1pet~1findByStatus"    
+  "/pet/findByTags":
+    $ref: "./modules/pet/api.yaml#/~1pet~1findByTags"    
+  "/pet/{petId}":
+    $ref: "./modules/pet/api.yaml#/~1pet~1%7BpetId%7D"        
+  "/pet/{petId}/uploadImage":
+    $ref: "./modules/pet/api.yaml#/~1pet~1%7BpetId%7D~1uploadImage"    
+  "/store/inventory":
+    $ref: "./modules/store/api.yaml#/~1store~1inventory"  
+  "/store/order":
+    $ref: "./modules/store/api.yaml#/~1store~1order"
+  "/store/order/{orderId}":              
+    $ref: "./modules/store/api.yaml#/~1store~1order~1%7BorderId%7D"   
+  "/user":
+    $ref: "./modules/user/api.yaml#/~1user"    
+  "/user/createWithArray":
+    $ref: "./modules/user/api.yaml#/~1user~1createWithArray"              
+  "/user/createWithList":
+    $ref: "./modules/user/api.yaml#/~1user~1createWithList"        
+  "/user/login":
+    $ref: "./modules/user/api.yaml#/~1user~1login"         
+  "/user/logout":
+    $ref: "./modules/user/api.yaml#/~1user~1logout"  
+  "/user/{username}":
+    $ref: "./modules/user/api.yaml#/~1user~1%7Busername%7D" 
+externalDocs:
+  description: Find out more about Swagger
+  url: http://swagger.io
+components:
+  schemas:
+    $ref: "./components/schemas.yaml"
+  securitySchemes:
+    $ref: "./components/securitySchemes.yaml"

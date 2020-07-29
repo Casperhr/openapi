@@ -3,37 +3,37 @@ OpenAPI feature tests
 
 OpenAPI 3 split into modules
 
-Main Api file is [api.yaml](./api.yaml)
+Main Api file is [api.yaml](./petstore/api.yaml)
 
 ## Components (Global)
-- [Responses](./components/responses.yaml)
-- [Schemas](./components/schemas.yaml)
-- [Security Schemas](./components/securitySchemas.yaml) 
+- [Responses](./petstore/components/responses.yaml)
+- [Schemas](./petstore/components/schemas.yaml)
+- [Security Schemas](./petstore/components/securitySchemas.yaml) 
 
 
 ## Modules
 
 ### Pet
-The main module file is [./modules/pet/api.yaml](./modules/pet/api.yaml)
+The main module file is [./petstore/modules/pet/api.yaml](./petstore/modules/pet/api.yaml)
 
 **Models**
 
-- [Category - ./modules/pet/models/category.yaml](./modules/pet/models/category.yaml)
-- [Pet - ./modules/pet/models/pet.yaml](./modules/pet/models/pet.yaml)
-- [Tag - ./modules/pet/models/tag.yaml](./modules/pet/models/tag.yaml) 
+- [Category - ./petstore/modules/pet/models/category.yaml](./petstore/modules/pet/models/category.yaml)
+- [Pet - ./petstore/modules/pet/models/pet.yaml](./petstore/modules/pet/models/pet.yaml)
+- [Tag - ./petstore/modules/pet/models/tag.yaml](./petstore/modules/pet/models/tag.yaml) 
 
 
 ### Store
-The main module file is [./modules/store/api.yaml](./modules/store/api.yaml)
+The main module file is [./petstore/modules/store/api.yaml](./petstore/modules/store/api.yaml)
 
 **Models**
 
-- [Order - ./modules/pet/models/category.yaml](./modules/pet/models/category.yaml)
+- [Order - ./petstore/modules/pet/models/category.yaml](./petstore/modules/pet/models/category.yaml)
 
 
 ### User
-The main module file is [./modules/user/api.yaml](./modules/user/api.yaml)
+The main module file is [./petstore/modules/user/api.yaml](./petstore/modules/user/api.yaml)
 
 **Models**
 
-- [User - ./modules/user/models/user.yaml](./modules/user/models/user.yaml)
+- [User - ./petstore/modules/user/models/user.yaml](./petstore/modules/user/models/user.yaml)

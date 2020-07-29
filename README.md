@@ -8,7 +8,7 @@ Main Api file is [api.yaml](./petstore/api.yaml)
 ## Components (Global)
 - [Responses](./petstore/components/responses.yaml)
 - [Schemas](./petstore/components/schemas.yaml)
-- [Security Schemas](./petstore/components/securitySchemas.yaml) 
+- [Security Schemes](./petstore/components/securitySchemes.yaml) 
 
 
 ## Modules

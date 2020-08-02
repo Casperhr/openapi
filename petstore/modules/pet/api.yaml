@@ -2,7 +2,7 @@
   post:
     tags:
     - pet
-    summary: Add a new pet to the store1
+    summary: Add a new pet to the store11
     description: ''
     operationId: addPet
     responses:

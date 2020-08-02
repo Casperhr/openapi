@@ -234,13 +234,13 @@
 components:
   schemas:
     Category:
-      $ref: "./models/category.yaml#/Category"    
+      $ref: "/models/category.yaml#/Category"    
     Tag:
-      $ref: "./models/tag.yaml#/Tag"   
+      $ref: "/models/tag.yaml#/Tag"   
     Pet:
-      $ref: "./models/pet.yaml#/Pet"  
+      $ref: "/models/pet.yaml#/Pet"  
     StorePet:
-      $ref: "./models/pet.yaml#/StorePet"      
+      $ref: "/models/pet.yaml#/StorePet"      
   responses:
     Pet:
       description: Successful operation

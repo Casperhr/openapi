@@ -8,7 +8,7 @@ Pet:
       type: string
       example: doggie
     category:
-      $ref: "/category.yaml#/Category"
+      $ref: "./category.yaml#/Category"
     photoUrls:
       type: array
       xml:
@@ -22,7 +22,7 @@ Pet:
         name: tag
         wrapped: true
       items:
-        $ref: "/Tag.yaml"        
+        $ref: "./Tag.yaml"        
     status:
       type: string
       description: pet status in the store

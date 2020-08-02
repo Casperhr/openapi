@@ -7,7 +7,7 @@
     operationId: addPet
     responses:
       200: 
-        $ref: "#/components/responses/Pet"
+        $ref: "./components/responses/Pet"
       405:
         $ref: "../../components/responses.yaml#/405" 
     security:

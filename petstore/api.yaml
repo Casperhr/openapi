@@ -29,38 +29,38 @@ tags:
     url: http://swagger.io
 paths:
   "/pet":
-    $ref: "./modules/pet/api.yaml#/~1pet"  
+    $ref: "/modules/pet/api.yaml#/~1pet"  
   "/pet/findByStatus":
-    $ref: "./modules/pet/api.yaml#/~1pet~1findByStatus"    
+    $ref: "/modules/pet/api.yaml#/~1pet~1findByStatus"    
   "/pet/findByTags":
-    $ref: "./modules/pet/api.yaml#/~1pet~1findByTags"    
+    $ref: "/modules/pet/api.yaml#/~1pet~1findByTags"    
   "/pet/{petId}":
-    $ref: "./modules/pet/api.yaml#/~1pet~1%7BpetId%7D"        
+    $ref: "/modules/pet/api.yaml#/~1pet~1%7BpetId%7D"        
   "/pet/{petId}/uploadImage":
-    $ref: "./modules/pet/api.yaml#/~1pet~1%7BpetId%7D~1uploadImage"    
+    $ref: "/modules/pet/api.yaml#/~1pet~1%7BpetId%7D~1uploadImage"    
   "/store/inventory":
-    $ref: "./modules/store/api.yaml#/~1store~1inventory"  
+    $ref: "/modules/store/api.yaml#/~1store~1inventory"  
   "/store/order":
-    $ref: "./modules/store/api.yaml#/~1store~1order"
+    $ref: "/modules/store/api.yaml#/~1store~1order"
   "/store/order/{orderId}":              
-    $ref: "./modules/store/api.yaml#/~1store~1order~1%7BorderId%7D"   
+    $ref: "/modules/store/api.yaml#/~1store~1order~1%7BorderId%7D"   
   "/user":
-    $ref: "./modules/user/api.yaml#/~1user"    
+    $ref: "/modules/user/api.yaml#/~1user"    
   "/user/createWithArray":
-    $ref: "./modules/user/api.yaml#/~1user~1createWithArray"              
+    $ref: "/modules/user/api.yaml#/~1user~1createWithArray"              
   "/user/createWithList":
-    $ref: "./modules/user/api.yaml#/~1user~1createWithList"        
+    $ref: "/modules/user/api.yaml#/~1user~1createWithList"        
   "/user/login":
-    $ref: "./modules/user/api.yaml#/~1user~1login"         
+    $ref: "/modules/user/api.yaml#/~1user~1login"         
   "/user/logout":
-    $ref: "./modules/user/api.yaml#/~1user~1logout"  
+    $ref: "/modules/user/api.yaml#/~1user~1logout"  
   "/user/{username}":
-    $ref: "./modules/user/api.yaml#/~1user~1%7Busername%7D" 
+    $ref: "/modules/user/api.yaml#/~1user~1%7Busername%7D" 
 externalDocs:
   description: Find out more about Swagger
   url: http://swagger.io
 components:
   schemas:
-    $ref: "./components/schemas.yaml"
+    $ref: "/components/schemas.yaml"
   securitySchemes:
-    $ref: "./components/securitySchemes.yaml"
+    $ref: "/components/securitySchemes.yaml"

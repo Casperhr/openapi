@@ -161,7 +161,7 @@
 components:
   schemas:
     User:
-      $ref: "./models/user.yaml"
+      $ref: "/models/user.yaml"
       xml:
         name: User
   requestBodies:

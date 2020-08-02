@@ -10,12 +10,12 @@ tags:
     url: http://swagger.io
 paths:
   "/pet":
-    $ref: "/modules/pet/api.yaml#/~1pet"  
+    $ref: "./modules/pet/api.yaml#/~1pet"  
 externalDocs:
   description: Find out more about Swagger
   url: http://swagger.io
 components:
   schemas:
-    $ref: "/components/schemas.yaml"
+    $ref: "./components/schemas.yaml"
   securitySchemes:
-    $ref: "/components/securitySchemes.yaml"
+    $ref: "./components/securitySchemes.yaml"
